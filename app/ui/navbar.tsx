@@ -33,15 +33,27 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap mt-5 mx-10 py-2 px-2">
             {/* <Logo /> */}
               <ul className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                {leftmenu.map((item, index) => (
-                  <li>
-                    <Link href={item.href}>
-                      <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
-                        {item.label}
-                      </p>
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link href="/travel">
+                    <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                      Travel
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/recommendation">
+                    <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                      Recommendation
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/story">
+                    <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                      Story/Podcast
+                    </p>
+                  </Link>
+                </li>
               </ul>
               <div className="flex justify-between items-center w-full md:w-auto">
                 <Link href="/">
@@ -51,18 +63,26 @@ const Navbar = () => {
                 </Link>
               </div>
               <ul className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
-                {rightmenu.map((item, index) => (
-                  <li>
-                    <Link href={item.href}>
+                <li>
+                    <Link href="/experience">
                       <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
-                        {item.label}
+                        Experience
                       </p>
                     </Link>
                   </li>
-                ))}
-                <Button color="default" variant="bordered">
-                  Experience Now
-                </Button>  
+                  <li>
+                    <Link href="/about">
+                      <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                        About Us
+                      </p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Button color="default" variant="bordered">
+                      Experience Now
+                    </Button>  
+                  </li>
+
               </ul>
 
           </div>
