@@ -35,7 +35,7 @@ const Navbar = () => {
               <ul className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
                 {leftmenu.map((item, index) => (
                   <li>
-                    <Link href={item.href} key={index}>
+                    <Link href={item.href}>
                       <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
                         {item.label}
                       </p>
@@ -53,7 +53,7 @@ const Navbar = () => {
               <ul className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
                 {rightmenu.map((item, index) => (
                   <li>
-                    <Link href={item.href} key={index}>
+                    <Link href={item.href}>
                       <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
                         {item.label}
                       </p>
