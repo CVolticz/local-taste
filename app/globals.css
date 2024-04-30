@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +43,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+
+.white-section {
+  background-color: #d8e3e7;
+  color: #132c33;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
