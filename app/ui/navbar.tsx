@@ -8,8 +8,8 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-8 lg:px-12 xl:px-24">
-      <div className="flex flex-wrap justify-between items-center md:justify-start md:gap-4 lg:gap-10 mt-2 md:mt-5 py-2 px-2">
-        <ul id="menu" className="hidden md:flex flex-wrap gap-4 lg:gap-10 items-center justify-center md:justify-start">
+      <div className="flex flex-wrap items-center md:justify-center mt-2 md:mt-5 py-2 px-10">
+        <ul id="menu" className="hidden md:flex flex-wrap lg:gap-6 justify-center">
           <li>
             <Link href="/travel">
               <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
@@ -32,14 +32,16 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex justify-between items-center w-full md:w-auto">
+        <ul id="menu" className="md:flex flex-wrap gap-20 justify-center">
+          <li>
             <Link href="/">
-              <p className="px-5 py-2 text-lg font-large text-gray-600 dark:text-gray-400 hover:text-blue-500">
+              <p className="px-12 py-2 text-lg font-large text-gray-600 dark:text-gray-400 hover:text-blue-500">
                 Local Taste
               </p>
             </Link>
-        </div>
-        <ul className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
+          </li>
+        </ul>
+        <ul id="menu" className="hidden md:flex flex-wrap lg:gap-6 justify-center">
           <li>
               <Link href="/experience">
                 <p className="px-5 py-2 text-md font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
