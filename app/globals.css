@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.feature-column {
+  padding: 3% 2%;
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+}
