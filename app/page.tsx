@@ -34,12 +34,12 @@ const buildPhotoBlocks = () => {
           .filter((photo) => photo.column === index)
           .map((filteredPhoto) => (
             <React.Fragment key={filteredPhoto.id}>
-
               <Slide direction="right" in={true} timeout={800}>
                 <PhotoBlock
                   key={filteredPhoto.id}
                   image={filteredPhoto.src}
                   link={filteredPhoto.link}
+                  width={filteredPhoto.width}
                   height={filteredPhoto.height}
                   heading={filteredPhoto.heading}
                 />
@@ -155,7 +155,9 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col items-center">
-        <div className="my-10 md:my-10 mx-4 sm:mx-8 lg:mx-12 px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 font-sm gap-8 lg:grid-cols-4 md:grid-cols-2">
+        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
+
+        <div className="my-10 md:my-10 mx-4 sm:mx-8 lg:mx-12 px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 font-sm gap-8 lg:grid-cols-2 md:grid-cols-1">
           {buildPhotoBlocks()}
         </div>
       </section>
