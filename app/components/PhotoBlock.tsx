@@ -32,7 +32,7 @@ const PhotoBlock = ({image, link, height, heading }: PhotoBlockProps) => {
               src={image}
               layout="responsive"
               width="100"
-              height={height}
+              height={`${height}`}
               objectFit="cover"
               objectPosition="50%,50%"
               alt="Photo"
