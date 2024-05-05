@@ -33,7 +33,7 @@ const buildPhotoBlocks = () => {
           .map((filteredPhoto) => (
             <Slide direction="right" in={true} timeout={800}>
               <PhotoBlock
-                key={filteredPhoto.id}
+                // key={filteredPhoto.id}
                 image={filteredPhoto.src}
                 link={filteredPhoto.link}
                 height={filteredPhoto.height}

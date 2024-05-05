@@ -11,7 +11,6 @@ import Image from "next/image";
  */
 
 export interface PhotoBlockProps {
-  key: string
   image: string;
   link: string;
   height: string;
@@ -22,10 +21,10 @@ export interface PhotoBlockProps {
 /**
  * PhotoBlock component
  */
-const PhotoBlock = ({key, image, link, height, heading }: PhotoBlockProps) => {
+const PhotoBlock = ({image, link, height, heading }: PhotoBlockProps) => {
   return (
     <>
-      <div key={key}>
+      <div>
         <Link href={link}>
           <div className={`group relative cursor-pointer`}>
             <Image
