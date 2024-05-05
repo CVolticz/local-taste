@@ -13,7 +13,7 @@ import Image from "next/image";
 export interface PhotoBlockProps {
   image: string;
   link: string;
-  height: string;
+  height: number;
   heading: string;
 }
 
