@@ -4,6 +4,10 @@ import Image from 'next/image';
 // MUI Import
 import {Paper, Card, CardContent, Slide, Typography} from '@mui/material';
 
+// Component imports
+import { photos } from '@/app/data/photos';
+import PhotoBlock from '@/app/components/PhotoBlock';
+
 
 // Fonts Import
 import { Noto_Sans_JP } from "next/font/google";
@@ -13,6 +17,36 @@ const notoSans = Noto_Sans_JP({
   style: ['normal'],
   subsets: ['vietnamese']
 })
+
+
+/**
+ * Function to build photo blocks
+ * @returns PhotoBlocks
+ */
+const buildPhotoBlocks = () => {
+  let items = [];
+  for (let index = 1; index < 5; index++) {
+    items.push(
+      <div key={index} className="flex flex-col justify-start gap-4">
+        {photos
+          .filter((photo) => photo.column === index)
+          .map((filteredPhoto) => (
+            <Slide direction="right" in={true} timeout={800}>
+              <PhotoBlock
+                key={filteredPhoto.id}
+                image={filteredPhoto.src}
+                link={filteredPhoto.link}
+                height={filteredPhoto.height}
+                heading={filteredPhoto.heading}
+              />
+            </Slide>
+          ))}
+      </div>
+    );
+  }
+  return items;
+};
+
 
 
 export default function Home() {
@@ -54,7 +88,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col items-center gradient-bg">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">We Offer Authentic Experience In Vietnam</h1>
-        <div className="my-10 md:my-10 mx-2 sm:mx-4 lg:mx-10 px-2 sm:px-4 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-cols-4 md:gap-x-4">
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-10 px-4 sm:px-6 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-cols-4 md:gap-x-4">
           <Slide direction="right" in={true} timeout={800}>
           <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
               <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6'>
@@ -113,7 +147,11 @@ export default function Home() {
             </div>
           </Slide>
         </div>
-
+      </section>
+      <section className="flex flex-col items-center">
+        <div className="my-10 md:my-10 mx-4 sm:mx-8 lg:mx-12 px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 font-sm gap-8 lg:grid-cols-4 md:grid-cols-2">
+          {buildPhotoBlocks()}
+        </div>
       </section>
     </>
 
