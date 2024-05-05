@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Next Level Import
 import Image from 'next/image';
 
@@ -31,15 +33,19 @@ const buildPhotoBlocks = () => {
         {photos
           .filter((photo) => photo.column === index)
           .map((filteredPhoto) => (
-            <Slide direction="right" in={true} timeout={800}>
-              <PhotoBlock
-                // key={filteredPhoto.id}
-                image={filteredPhoto.src}
-                link={filteredPhoto.link}
-                height={filteredPhoto.height}
-                heading={filteredPhoto.heading}
-              />
-            </Slide>
+            <React.Fragment key={filteredPhoto.id}>
+
+              <Slide direction="right" in={true} timeout={800}>
+                <PhotoBlock
+                  key={filteredPhoto.id}
+                  image={filteredPhoto.src}
+                  link={filteredPhoto.link}
+                  height={filteredPhoto.height}
+                  heading={filteredPhoto.heading}
+                />
+              </Slide>
+            </React.Fragment>
+
           ))}
       </div>
     );
