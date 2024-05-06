@@ -45,7 +45,6 @@ const buildPhotoBlocks = () => {
                 />
               </Slide>
             </React.Fragment>
-
           ))}
       </div>
     );
@@ -71,7 +70,7 @@ export default function Home() {
               />
               <p className="mt-5 pt-5 text-2xl">
                 <span style={{fontFamily: notoSans.style.fontFamily, fontWeight: 400}}>
-                  Exlore the hidden gems of Saigon, discover off-the-beaten-path street food,
+                  Explore the hidden gems of Saigon, discover off-the-beaten-path street food,
                   and immerse yourself in the local way of life. Together with my enthusiastic 
                   and expertly trained local guides, we'll take you through the back alleys 
                   and hidden streets that reveal the true essence of Saigon.
@@ -96,10 +95,17 @@ export default function Home() {
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">We Offer Authentic Experience In Vietnam</h1>
         <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-10 px-4 sm:px-6 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-cols-4 md:gap-x-4">
           <Slide direction="right" in={true} timeout={800}>
-          <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6'>
+            <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
+              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
                 <CardContent>
-                  <Typography className='text-center bold' gutterBottom variant="h4" component="div">
+                  <div className="flex justify-center items-center">
+                    <Image 
+                      src="/images/promocards/promo_1.png" 
+                      alt="Quality Tour Guide" 
+                      width="100" 
+                      height="100" />
+                  </div>
+                  <Typography className='text-center bold' gutterBottom variant="h5" component="div">
                     Quality Tour Guide
                   </Typography>
                   <Typography className='text-center text-lg' variant="body1" color="text.secondary">
@@ -111,9 +117,16 @@ export default function Home() {
           </Slide>
           <Slide direction="right" in={true} timeout={800}>
           <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6'>
+              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
                 <CardContent>
-                  <Typography className='text-center font-bold' gutterBottom variant="h4" component="div">
+                <div className="flex justify-center items-center">
+                  <Image 
+                    src="/images/promocards/promo_2.png" 
+                    alt="Quality Tour Guide" 
+                    width="100" 
+                    height="100" />
+                </div>
+                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
                     Friendly Price
                   </Typography>
                   <Typography className='text-center text-lg' variant="body1" color="text.secondary">
@@ -125,10 +138,16 @@ export default function Home() {
           </Slide>
           <Slide direction="left" in={true} timeout={800}>
             <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6'>
+              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
                 <CardContent>
-
-                  <Typography className='text-center font-bold' gutterBottom variant="h4" component="div">
+                  <div className="flex justify-center items-center">
+                    <Image 
+                      src="/images/promocards/promo_3.png" 
+                      alt="Quality Tour Guide" 
+                      width="100" 
+                      height="100" />
+                  </div>
+                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
                     Reliable
                   </Typography>
                   <Typography className='text-center text-lg' variant="body1" color="text.secondary">
@@ -140,9 +159,16 @@ export default function Home() {
           </Slide>
           <Slide direction="left" in={true} timeout={800}>
             <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6'>
+              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
                 <CardContent>
-                  <Typography className='text-center font-bold' gutterBottom variant="h4" component="div">
+                  <div className="flex justify-center items-center">
+                    <Image 
+                      src="/images/promocards/promo_4.png" 
+                      alt="Quality Tour Guide" 
+                      width="100" 
+                      height="100" />
+                  </div>
+                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
                     Customization
                   </Typography>
                   <Typography className='text-center text-lg' variant="body1" color="text.secondary">
