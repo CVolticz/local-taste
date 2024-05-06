@@ -3,10 +3,27 @@
 @tailwind utilities;
 
 
+
 .feature-column {
   padding: 3% 2%;
 }
 
 .gradient-bg {
   background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+}
+
+.section-background {
+  background: #F4F6EF;
+}
+
+.feature-column:ellipse {
+  position: absolute;
+  width: 450px;
+  height: 200px;
+  left: 200px;
+  top: 95rem;
+  background: rgba(50, 125, 129, 0.5);
+  opacity: 0.8;
+  filter: blur(99.7591px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }

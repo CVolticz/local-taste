@@ -29,9 +29,9 @@ const buildPhotoBlocks = () => {
   let items = [];
   for (let index = 1; index < 5; index++) {
     items.push(
-      <div key={index} className="flex flex-col justify-start gap-4">
+      <div key={index} className="flex flex-row justify-start gap-2">
         {photos
-          .filter((photo) => photo.column === index)
+          .filter((photo) => photo.row === index)
           .map((filteredPhoto) => (
             <React.Fragment key={filteredPhoto.id}>
               <Slide direction="right" in={true} timeout={800}>
@@ -154,12 +154,11 @@ export default function Home() {
           </Slide>
         </div>
       </section>
-      <section className="flex flex-col items-center">
-        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
-
-        <div className="my-10 md:my-10 mx-4 sm:mx-8 lg:mx-12 px-4 sm:px-6 lg:px-12 py-14 grid grid-cols-1 font-sm gap-8 lg:grid-cols-2 md:grid-cols-1">
-          {buildPhotoBlocks()}
-        </div>
+      <section className="flex flex-col items-center section-background ellipse">
+          <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
+          <div className="my-4 md:my-2 py-2 mx-4 sm:mx-6 lg:mx-10 px-2 sm:px-4 lg:px-10 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
+            {buildPhotoBlocks()}
+          </div>
       </section>
     </>
 
