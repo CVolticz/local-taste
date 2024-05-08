@@ -18,14 +18,13 @@
 
 .ellipse {
   position: absolute;
-  width: 800px;
-  height: 320px;
-  left: 200px;
-  top: 120rem;
+  width: 80%; /* Adjust the width as needed */
+  height: 40vh; /* Adjust the height as needed */
+  left: 10%; /* Adjust the left position as needed */
+  top: 120vh; /* Adjust the top position as needed */
   background: rgba(50, 125, 129, 0.5);
   opacity: 0.8;
-  filter: blur(99.7591px);
+  filter: blur(5vw); /* Adjust the blur effect */
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 1;
 }
-
