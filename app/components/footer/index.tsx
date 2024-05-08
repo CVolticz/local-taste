@@ -53,20 +53,44 @@ const buildSocialButton = () => {
 function Footer() {
     return (
       <section className="flex flex-col items-center">
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-5">
           <Image 
             className="flex-shrink-0"
             src="/images/footer-logo.png" 
             alt="Local Taste Vietnam" 
-            width={300} 
-            height={200} />
-          <div className="flex flex-col">
-            <Typography variant="h6" color="textPrimary">
-              Local Taste Vietnam
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              Local Taste Vietnam is a local food and travel blog that provides information about local food and travel in Vietnam.
-            </Typography>
+            width={350} 
+            height={100} />
+          <div className="flex flex-row gap-10 my-10 md:my-8 py-4 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4">
+            <div className="flex flex-col flex-1">
+              <Typography variant="h5" color="textPrimary text-bold">
+                Company
+              </Typography>
+              <ul>
+                <li><Link href="/about"><p>About</p></Link></li>
+                <li><Link href="/careers"><p>Careers</p></Link></li>
+                <li><Link href="/mobile"><p>Mobile</p></Link></li>
+              </ul>
+            </div>
+            <div className="flex flex-col flex-1">
+              <Typography variant="h5" color="textPrimary text-bold">
+                Contact
+              </Typography>
+              <ul>
+                <li><Link href="/faq"><p>Help/FAQ</p></Link></li>
+                <li><Link href="/pr"><p>Press</p></Link></li>
+                <li><Link href="/affiliates"><p>Affiliates</p></Link></li>
+              </ul>
+            </div>
+            <div className="flex flex-col flex-1">
+              <Typography variant="h5" color="textPrimary text-bold">
+                More...
+              </Typography>
+              <ul>
+                <li><Link href="/arlinefees"><p>Airlinefees</p></Link></li>
+                <li><Link href="/arline"><p>Airline</p></Link></li>
+                <li><Link href="/recommendation"><p>Recommendation</p></Link></li>
+              </ul>
+            </div>
           </div>
           <div className="my-10 md:my-8 py-4 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
             {buildSocialButton()}
