@@ -53,14 +53,14 @@ const buildSocialButton = () => {
 function Footer() {
     return (
       <section className="flex flex-col items-center">
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-row flex-col sm:flex-row gap-5">
           <Image 
             className="flex-shrink-0"
             src="/images/footer-logo.png" 
             alt="Local Taste Vietnam" 
             width={350} 
             height={100} />
-          <div className="flex flex-row gap-10 my-10 md:my-8 py-4 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4">
+          <div className="flex flex-row flex-col sm:flex-row gap-10 my-10 sm:my-8 py-4 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4">
             <div className="flex flex-col flex-1">
               <Typography variant="h5" color="textPrimary text-bold">
                 Company

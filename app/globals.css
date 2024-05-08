@@ -18,13 +18,22 @@
 
 .ellipse {
   position: absolute;
-  width: 80%; /* Adjust the width as needed */
+  width: 60%; /* Adjust the width as needed */
   height: 40vh; /* Adjust the height as needed */
-  left: 10%; /* Adjust the left position as needed */
-  top: 120vh; /* Adjust the top position as needed */
+  left: 5%; /* Adjust the left position as needed */
+  top: 180vh; /* Adjust the top position as needed */
   background: rgba(50, 125, 129, 0.5);
   opacity: 0.8;
   filter: blur(5vw); /* Adjust the blur effect */
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .ellipse {
+    width: 80%; /* Adjust the width for smaller screens */
+    left: 10%; /* Adjust the left position for smaller screens */
+    top: 150vh; /* Adjust the top position for smaller screens */
+    filter: blur(2vw); /* Adjust the blur effect for smaller screens */
+  }
 }
