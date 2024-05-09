@@ -10,7 +10,7 @@ import Image from "next/image";
  * Photoblock interface
  */
 
-export interface PhotoBlockProps {
+interface PhotoBlockProps {
   image: string;
   link: string;
   width: number;

@@ -7,7 +7,11 @@ import Image from 'next/image';
 import {Paper, Card, CardContent, Slide, Typography} from '@mui/material';
 
 // Component imports
+import { promos } from '@/app/data/promos';
+import { tourpackages } from '@/app/data/tourpackages';
 import { photos } from '@/app/data/photos';
+import PromoBlock from '@/app/components/PromoBlock';
+import TourPackageBlock from '@/app/components/TourPackageBlock';
 import PhotoBlock from '@/app/components/PhotoBlock';
 
 
@@ -19,6 +23,68 @@ const notoSans = Noto_Sans_JP({
   style: ['normal'],
   subsets: ['vietnamese']
 })
+
+
+
+
+/**
+ * Function to build promo blocks
+ * @returns PhotoBlocks
+ */
+const buildPromoBlocks = () => {
+  let items = [];
+  for (let index = 1; index < 5; index++) {
+    items.push(
+      <div key={index} className="flex flex-row justify-start gap-2">
+        {promos
+          .filter((promo) => promo.row === index)
+          .map((filteredPromo) => (
+            <React.Fragment key={filteredPromo.id}>
+              <Slide direction="right" in={true} timeout={800}>
+                <PromoBlock
+                  key={filteredPromo.id}
+                  image={filteredPromo.image}
+                  title={filteredPromo.title}
+                  description={filteredPromo.description}
+                />
+              </Slide>
+            </React.Fragment>
+          ))}
+      </div>
+    );
+  }
+  return items;
+};
+
+/**
+ * Function to build tour package blocks
+ * @returns PhotoBlocks
+ */
+const buildPackageBlocks = () => {
+  let items = [];
+  for (let index = 1; index < 5; index++) {
+    items.push(
+      <div key={index} className="flex flex-row justify-start gap-2">
+        {tourpackages
+          .filter((tourpackage) => tourpackage.row === index)
+          .map((filteredTourpackage) => (
+            <React.Fragment key={filteredTourpackage.id}>
+              <Slide direction="right" in={true} timeout={800}>
+                <TourPackageBlock
+                  key={filteredTourpackage.id}
+                  image={filteredTourpackage.image}
+                  title={filteredTourpackage.title}
+                  description={filteredTourpackage.description}
+                  link={filteredTourpackage.link}
+                />
+              </Slide>
+            </React.Fragment>
+          ))}
+      </div>
+    );
+  }
+  return items;
+};
 
 
 /**
@@ -93,91 +159,14 @@ export default function Home() {
       </section>
       <section className="flex flex-col items-center gradient-bg">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">We Offer Authentic Experience In Vietnam</h1>
-        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-10 px-4 sm:px-6 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-cols-4 md:gap-x-4">
-          <Slide direction="right" in={true} timeout={800}>
-            <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
-                <CardContent>
-                  <div className="flex justify-center items-center">
-                    <Image 
-                      src="/images/promocards/promo_1.png" 
-                      alt="Quality Tour Guide" 
-                      width="100" 
-                      height="100" />
-                  </div>
-                  <Typography className='text-center bold' gutterBottom variant="h5" component="div">
-                    Quality Tour Guide
-                  </Typography>
-                  <Typography className='text-center text-lg' variant="body1" color="text.secondary">
-                    Experienced local tour guides who are passionate about sharing their culture and history.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </Slide>
-          <Slide direction="right" in={true} timeout={800}>
-          <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
-                <CardContent>
-                <div className="flex justify-center items-center">
-                  <Image 
-                    src="/images/promocards/promo_2.png" 
-                    alt="Quality Tour Guide" 
-                    width="100" 
-                    height="100" />
-                </div>
-                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
-                    Friendly Price
-                  </Typography>
-                  <Typography className='text-center text-lg' variant="body1" color="text.secondary">
-                    Our tours are priced competitively to ensure you get the best value for your money.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </Slide>
-          <Slide direction="left" in={true} timeout={800}>
-            <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 500, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
-                <CardContent>
-                  <div className="flex justify-center items-center">
-                    <Image 
-                      src="/images/promocards/promo_3.png" 
-                      alt="Quality Tour Guide" 
-                      width="100" 
-                      height="100" />
-                  </div>
-                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
-                    Reliable
-                  </Typography>
-                  <Typography className='text-center text-lg' variant="body1" color="text.secondary">
-                    We are committed to providing you with a safe and enjoyable experience. 
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </Slide>
-          <Slide direction="left" in={true} timeout={800}>
-            <div className="shadow-lg bg-white text-black text-left rounded-lg mx-10 my-5">
-              <Card style={{maxHeight: 600, maxWidth: 275, overflow: 'auto'}} className='px-6 py-6 h-full'>
-                <CardContent>
-                  <div className="flex justify-center items-center">
-                    <Image 
-                      src="/images/promocards/promo_4.png" 
-                      alt="Quality Tour Guide" 
-                      width="100" 
-                      height="100" />
-                  </div>
-                  <Typography className='text-center font-bold' gutterBottom variant="h5" component="div">
-                    Customization
-                  </Typography>
-                  <Typography className='text-center text-lg' variant="body1" color="text.secondary">
-                    We offer a range of tours that can be customized to suit your interests and preferences.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </Slide>
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-10 px-4 sm:px-6 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-span-4 md:gap-x-4">
+          {buildPromoBlocks()}
+        </div>
+      </section>
+      <section className="flex flex-col items-center diag-gradient-bg">
+        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Let Us Show You The Hidden Gem</h1>
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-span-3 md:gap-x-4">
+          {buildPackageBlocks()}
         </div>
       </section>
       <section className="flex flex-col items-center section-background">
@@ -191,4 +180,3 @@ export default function Home() {
 
   );
 }
-

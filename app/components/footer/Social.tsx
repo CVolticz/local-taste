@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Interface for Social component
-export interface SocialProps {
+interface SocialProps {
   link: string;
   image: string;
   width: number;
