@@ -200,7 +200,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col items-center section-background">
-        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
+        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Enjoy The Gallery</h1>
         <div className="my-4 md:my-2 py-2 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
           <div className="ellipse"></div>
           {buildPhotoBlocks()}

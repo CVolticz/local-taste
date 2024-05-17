@@ -34,6 +34,7 @@ li img {
 }
 
 .section-background {
+  position: relative;
   background: #F4F6EF;
 }
 
@@ -42,7 +43,7 @@ li img {
   width: 60%; /* Adjust the width as needed */
   height: 40vh; /* Adjust the height as needed */
   left: 5%; /* Adjust the left position as needed */
-  top: 345vh; /* Adjust the top position as needed */
+  top: 30%; /* Adjust the top position as needed */
   background: rgba(50, 125, 129, 0.5);
   opacity: 0.8;
   filter: blur(5vw); /* Adjust the blur effect */
