@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 
 // MUI Import
-import {Paper, Card, CardContent, Slide, Typography} from '@mui/material';
+import { Slide } from '@mui/material';
 
 // Component imports
 import { promos } from '@/app/data/promos';
@@ -167,6 +167,36 @@ export default function Home() {
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Let Us Show You The Hidden Gem</h1>
         <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 grid grid-cols-1 font-sm gap-2 sm:gap-4 md:grid-span-3 md:gap-x-4">
           {buildPackageBlocks()}
+        </div>
+      </section>
+      <section className="flex flex-col items-center diag-gradient-bg">
+        <div className="my-4 md:my-2 py-2 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
+          <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
+          <div className="flex flex-row justify-start gap-2">
+            <ul>
+              <li>
+                <Image src="/images/booking/b1.png" alt="booking-step-1" width="50" height="50" />
+                <div className="text-container">
+                  <h2 className='font-bold'>Choose the Experience</h2>
+                  <p>Choose from our selection of tours and experiences</p>
+                </div>
+              </li>
+              <li>
+                <Image src="/images/booking/b2.png" alt="booking-step-2" width="50" height="50" />
+                <div className="text-container">
+                  <h2 className='font-bold'>Pick a date</h2>
+                  <p>Select the date that you would like to join us for the tour</p>
+                </div>
+              </li>
+              <li>
+                <Image src="/images/booking/b3.png" alt="booking-step-3" width="50" height="50" />
+                <div className="text-container">
+                  <h2 className='font-bold'>Make a Payment/Text us on Whatsapp to pay for your tour</h2>
+                  <p>Make a payment to secure your spot on the tour</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className="flex flex-col items-center section-background">
