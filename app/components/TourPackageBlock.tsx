@@ -22,28 +22,27 @@ interface PackageBlockProps {
 
 function TourPackageBlock({ image, title, description, link }: PackageBlockProps) {
   return (
-    <div className="shadow-2xl bg-white text-black text-left mx-10 my-5 rounded-3xl">
+    <div className="shadow-2xl bg-white text-black mx-10 my-5 rounded-3xl">
       <Card 
-        className='px-3 py-3 h-full'
-        sx={{maxHeight: 600, maxWidth: 300, overflow: 'auto', borderRadius: 3}} >
+        className="h-full rounded-3xl"
+        sx={{maxHeight: 600, maxWidth: 270, borderRadius: 3}} >
         <CardActionArea>
           <Link href={link}>
-            <CardMedia
-              className='rounded-t-3xl'
-              component="img"
+            <Image 
+              className="rounded-t-xl h-80"
+              src={image} 
               alt={title}
-              height="40"
-              image={image}
-            />
-            </Link>
-            <CardContent>
-              <Typography className='font-bold' gutterBottom variant="h5" component="div">
-                {title}
-              </Typography>
-              <Typography className='text-lg' variant="body1" color="text.secondary">
-                {description}
-              </Typography>
-            </CardContent>
+              width={300} 
+              height={100}/>
+          </Link>
+          <CardContent>
+            <Typography className='font-bold text-wrap' gutterBottom variant="h5" component="div">
+              {title}
+            </Typography>
+            <Typography className='text-lg' variant="body1" color="text.secondary">
+              {description}
+            </Typography>
+          </CardContent>
         </CardActionArea>
       </Card>
     </div>
