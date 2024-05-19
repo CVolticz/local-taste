@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // MUI Import
-import { Slide, Card, CardActionArea, CardContent, Typography } from '@mui/material';
+import { Button, Card, CardActionArea, CardContent, Slide, TextField, Typography } from '@mui/material';
 
 // Component imports
 import { promos } from '@/app/data/promos';
@@ -36,7 +36,7 @@ const buildPromoBlocks = () => {
   let items = [];
   for (let index = 1; index < 5; index++) {
     items.push(
-      <div key={index} className="flex md:flex-row sm:flex-col md:flex-wrap sm:flex-nowrap justify-start gap-2">
+      <div key={index} className="flex flex-col sm:flex-row justify-start gap-2">
         {promos
           .filter((promo) => promo.row === index)
           .map((filteredPromo) => (
@@ -65,7 +65,7 @@ const buildPackageBlocks = () => {
   let items = [];
   for (let index = 1; index < 3; index++) {
     items.push(
-      <div key={index} className="flex md:flex-row sm:flex-col md:flex-wrap sm:flex-nowrap justify-start gap-2">
+      <div key={index} className="flex flex-col sm:flex-row justify-start gap-2">
         {tourpackages
           .filter((tourpackage) => tourpackage.row === index)
           .map((filteredTourpackage) => (
@@ -86,7 +86,6 @@ const buildPackageBlocks = () => {
   }
   return items;
 };
-
 
 /**
  * Function to build photo blocks
@@ -160,16 +159,17 @@ export default function Home() {
       </section>
       <section className="flex flex-col items-center gradient-bg">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">We Offer Authentic Experience In Vietnam</h1>
-        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-10 px-4 sm:px-6 lg:px-10 grid grid-cols-1 font-sm gap-2 sm:gap-4 sm:grid-cols-1 md:grid-span-4 md:gap-x-4 ">
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 font-sm gap-2 sm:gap-4">
           {buildPromoBlocks()}
         </div>
       </section>
       <section className="flex flex-col items-center diag-gradient-bg">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Let Us Show You The Hidden Gem</h1>
-        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 grid grid-cols-1 font-sm gap-2 sm:gap-4 sm:grid-cols-1 md:grid-span-3 md:gap-x-4">
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 font-sm gap-2 sm:gap-4">
           {buildPackageBlocks()}
         </div>
       </section>
+
       <section className="flex flex-col items-center diag-gradient-bg">
         <div className="my-4 md:my-2 py-2 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
           <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
@@ -228,6 +228,34 @@ export default function Home() {
           <div className="ellipse"></div>
           {buildPhotoBlocks()}
         </div>
+      </section>
+      <section className="flex flex-col items-center diag-gradient-bg">
+        <div className="relative">
+          <Image 
+            src="/images/back-banner.png" 
+            alt="banner"
+            width="1400" 
+            height="800"
+          />
+          <div className="absolute inset-0 flex flex-col justify-center items-center">
+            <h3 className="z-10 text-5xl text-center font-bold mb-4">Subscribe to get information, latest news and other interesting offers</h3>
+            <div className="flex z-10 mt-10">
+              <TextField
+                className="mr-2 w-200"
+                required
+                id="filled-required"
+                label="Required"
+                defaultValue="Email"
+                variant="filled"
+              />
+              <div className="mx-20"></div> {/* Wide space */}
+              <Button variant="contained">
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+        {/* <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6"></div> */}
       </section>
     </>
 
