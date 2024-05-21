@@ -14,6 +14,7 @@ import { photos } from '@/app/data/photos';
 import PromoBlock from '@/app/components/PromoBlock';
 import TourPackageBlock from '@/app/components/TourPackageBlock';
 import PhotoBlock from '@/app/components/PhotoBlock';
+import ReviewCarousel from './components/ReviewCarousel';
 
 
 // Fonts Import
@@ -170,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center diag-gradient-bg">
+      <section className="flex flex-col items-center">
         <div className="my-4 md:my-2 py-2 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
           <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
           <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6">
@@ -222,6 +223,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <section className="flex flex-col items-center section-background">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">Enjoy The Gallery</h1>
         <div className="my-4 md:my-2 py-2 mx-4 sm:mx-4 lg:mx-6 px-2 sm:px-4 lg:px-6 grid grid-span-2 font-sm gap-2 lg:grid-span-2 md:grid-span-1">
@@ -230,7 +232,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col items-center diag-gradient-bg">
-        <div className="relative">
+        <div className="relative px-20 py-20">
           <Image 
             src="/images/back-banner.png" 
             alt="banner"
@@ -238,7 +240,7 @@ export default function Home() {
             height="800"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center">
-            <h3 className="z-10 text-5xl text-center font-bold mb-4">Subscribe to get information, latest news and other interesting offers</h3>
+            <h3 className="z-10 px-40 py-10 text-5xl text-center font-bold">Subscribe to get information, latest news and other interesting offers</h3>
             <div className="flex z-10 mt-10">
               <TextField
                 className="mr-2 w-200"
@@ -248,7 +250,7 @@ export default function Home() {
                 defaultValue="Email"
                 variant="filled"
               />
-              <div className="mx-20"></div> {/* Wide space */}
+              <div className="mx-10"></div> {/* Wide space */}
               <Button variant="contained">
                 Subscribe
               </Button>
@@ -256,6 +258,13 @@ export default function Home() {
           </div>
         </div>
         {/* <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6"></div> */}
+      </section>
+
+      <section className="flex flex-col items-center gradient-bg">
+        <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">User Testimonial</h1>
+        <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 font-sm gap-2 sm:gap-4">
+          <ReviewCarousel />
+        </div>
       </section>
     </>
 
