@@ -1,6 +1,6 @@
 "use server";
 
-import { IPost } from "@/app/components/PostCard";
+import { IPost } from "@/components/PostCard";
 
 export async function getPostsByTag(tagSlug: string) {
   let posts;

@@ -6,8 +6,8 @@ import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 // Header/Footer
-import Navigation from "./components/navigation";
-import Footer from "./components/footer";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 
 const inter = Inter({ subsets: ["latin"] });

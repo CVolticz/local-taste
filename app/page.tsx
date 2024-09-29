@@ -11,10 +11,10 @@ import { Button, Card, CardActionArea, CardContent, Slide, TextField, Typography
 import { promos } from '@/app/data/promos';
 import { tourpackages } from '@/app/data/tourpackages';
 import { photos } from '@/app/data/photos';
-import PromoBlock from '@/app/components/PromoBlock';
-import TourPackageBlock from '@/app/components/TourPackageBlock';
-import PhotoBlock from '@/app/components/PhotoBlock';
-import ReviewCarousel from './components/ReviewCarousel';
+import PromoBlock from '@/components/PromoBlock';
+import TourPackageBlock from '@/components/TourPackageBlock';
+import PhotoBlock from '@/components/PhotoBlock';
+// import ReviewCarousel from '@/components/ReviewCarousel';
 
 
 // Fonts Import

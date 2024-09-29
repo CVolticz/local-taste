@@ -1,6 +1,6 @@
 "use server";
 
-import { IPost } from "@/app/components/PostCard";
+import { IPost } from "@/components/PostCard";
 
 export async function getPostBySlug(slug: string) {
   const postUrl = `${process.env.GHOST_API_URL}/ghost/api/content/posts/?key=${process.env.GHOST_CONTENT_API_KEY}&include=tags,authors&order=published_at%20desc&filter=slug:${slug}`;

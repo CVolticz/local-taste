@@ -1,5 +1,7 @@
+"use client";
+
 import { getPostBySlug } from "@/actions/getPostsBySlug";
-import { IPost } from "@/app/components/PostCard";
+import { IPost } from "@/components/PostCard";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 

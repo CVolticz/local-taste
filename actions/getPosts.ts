@@ -1,6 +1,6 @@
-"use server"
+"use server";
 
-import { IPost } from "@/app/components/PostCard";
+import { IPost } from "@/components/PostCard";
 
 /**
  * Async Function to Grab Posts Ghost Backend 
@@ -18,6 +18,8 @@ export async function getPosts() {
       return { data, status };
     }
   );
+
+  console.log(postsResponse);
 
   if (postsResponse.status != 200) {
     console.log(postsResponse.data.errors);

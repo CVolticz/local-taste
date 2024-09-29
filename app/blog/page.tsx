@@ -1,6 +1,6 @@
 import { getPosts } from "@/actions/getPosts";
 // import Header from "@/app/components/Header";
-import PostCard, { IPost } from "@/app/components/PostCard";
+import PostCard, { IPost } from "@/components/PostCard";
 
 export default async function Blog() {
   const SamplePost = {

@@ -1,6 +1,6 @@
 "use server";
 
-import { ITag } from "@/app/components/PostCard";
+import { ITag } from "@/components/PostCard";
 
 export async function getTags() {
   const tagsUrl = `${process.env.GHOST_API_URL}/ghost/api/content/tags/?key=${process.env.GHOST_CONTENT_API_KEY}`;

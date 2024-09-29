@@ -1,6 +1,6 @@
 import { getTags } from "@/actions/getTag";
 // import Header from "@/app/components/Header";
-import { ITag } from "@/app/components/PostCard";
+import { ITag } from "@/components/PostCard";
 import Link from "next/link";
 
 export default async function Tags() {
