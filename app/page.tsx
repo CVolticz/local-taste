@@ -260,12 +260,12 @@ export default function Home() {
         {/* <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-6"></div> */}
       </section>
 
-      <section className="flex flex-col items-center gradient-bg">
+      {/* <section className="flex flex-col items-center gradient-bg">
         <h1 className="mx-2 my-2 px-2 py-2 text-6xl font-bold mb-4">User Testimonial</h1>
         <div className="my-10 md:my-10 mx-4 sm:mx-4 lg:mx-6 px-4 sm:px-4 lg:px-6 font-sm gap-2 sm:gap-4">
           <ReviewCarousel />
         </div>
-      </section>
+      </section> */}
     </>
 
   );

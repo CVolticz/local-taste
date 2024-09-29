@@ -30,9 +30,9 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                 </Link>
               </li>
               <li>
-                <Link href="/story">
+                <Link href="/blog">
                   <p className="px-5 py-2 text-md text-600 hover:text-blue-500">
-                    Story/Podcast
+                    Blog
                   </p>
                 </Link>
               </li>
