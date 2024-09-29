@@ -1,6 +1,7 @@
 "use server";
 
 import { IPost } from "@/components/PostCard";
+import { revalidatePath } from 'next/cache'; // clear the cache for a specific path
 
 /**
  * Async Function to Grab Posts Ghost Backend 
@@ -19,8 +20,6 @@ export async function getPosts() {
     }
   );
 
-  console.log(postsResponse);
-
   if (postsResponse.status != 200) {
     console.log(postsResponse.data.errors);
     return [];
@@ -35,6 +34,8 @@ export async function getPosts() {
       (post.updated_at = post.updated_at.split("T")[0])
     )
   );
+
+  revalidatePath('/blog');
 
   return posts;
 }
